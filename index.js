@@ -37,14 +37,6 @@ app.post("/addingproduct", async (req, res) => {
 
 
 
-    //   app.delete("/delete/:id", async (req, res) => {
-       
-             
-      
-    //           const list = await UserModel.deleteOne({ _id: req.params.id });
-    //           res.send(200).send({ "message": "delete one successfully" })
-    //         })
-
             app.delete(`/delete/:id`, async (req, res) => {
                 let id = req.params.id;
               //   console.log(id)
@@ -85,7 +77,7 @@ app.get("/dashboard", async (req, res) => {
   res.send(data);
 });
 
-app.get("/bookmark", async (req, res) => {
+app.get("/bookmarkfind", async (req, res) => {
  
     const data = await BookmarkModel.find();
     res.send(data);
